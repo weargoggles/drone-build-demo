@@ -2,8 +2,8 @@ pipeline:
   backend:
     image: python:3.6
     environment:
-      - PYTHONPATH="usr/local/lib/python3.6/site-packages"
-      - PATH="usr/local/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      - PYTHONPATH=usr/local/lib/python3.6/site-packages
+      - PATH=usr/local/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
     commands:
       - pip install --root . -r requirements.txt
       - ls . usr

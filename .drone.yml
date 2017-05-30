@@ -1,0 +1,15 @@
+pipeline:
+  backend:
+    image: python:3.6
+    environment:
+      - PYTHONPATH="usr/local/lib/python3.6/site-packages"
+      - PATH="usr/local/bin:${PATH}"
+    commands:
+      - pip install --root . -r requirements.txt
+      - gunicorn --version
+
+  frontend:
+    image: node
+    commands:
+      - npm install
+      - npm run build

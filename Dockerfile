@@ -7,5 +7,5 @@ EXPOSE 8000
 CMD gunicorn \
   --workers=2 \
   --worker-class="egg:meinheld#gunicorn_worker" \
-  --bind=0.0.0.0
+  --bind=0.0.0.0 \
   app:app

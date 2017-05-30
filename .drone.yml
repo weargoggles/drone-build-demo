@@ -18,3 +18,5 @@ pipeline:
     repo: weargoggles/drone-build-demo
     tags: latest
     secrets: [ docker_username, docker_password ]
+    when:
+      branch: master

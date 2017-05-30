@@ -12,4 +12,9 @@ pipeline:
     commands:
       - ls usr/local/lib/python3.6/site-packages
       - npm install --quiet
-      - npm run build
+
+  push:
+    image: plugins/docker
+    repo: weargoggles/drone-build-demo
+    tags: latest
+    secrets: [ docker_username, docker_password ]

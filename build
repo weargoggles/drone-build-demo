@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-docker build -t $PYTHON_DEV_IMAGE -f dev/python.dockerfile .
-docker build -t $NODE_DEV_IMAGE -f dev/node.dockerfile .
+docker build -t $PYTHON_DEV_IMAGE -f etc/environments/development/python.dockerfile .
+docker build -t $NODE_DEV_IMAGE -f etc/environments/development/node.dockerfile .

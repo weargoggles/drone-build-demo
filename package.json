@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "serve-dev": "budo src/index.js -- -t babelify",
+    "watch": "watchify src/index.js -o static/index.js -d -t babelify -v",
+    "build": "browserify -d -t babelify src/index.js | uglifyjs -c -m --source-map content=inline --output static/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,8 +20,15 @@
   },
   "homepage": "https://github.com/weargoggles/drone-build-demo#readme",
   "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
     "babelify": "^7.3.0",
     "browserify": "^14.4.0",
     "react": "^15.5.4"
+  },
+  "devDependencies": {
+    "budo": "^10.0.3",
+    "react-dom": "^15.5.4"
   }
 }

@@ -9,10 +9,10 @@ pipeline:
       - py.test tests.py
 
   frontend:
-    image: node
+    image: node:6
     commands:
-      - ls usr/local/lib/python3.6/site-packages
       - npm install --quiet
+      - npm run build
       - npm run test
 
   push:

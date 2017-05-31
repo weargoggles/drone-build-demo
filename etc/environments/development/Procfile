@@ -1,2 +1,2 @@
-web: /bin/bash -c "docker run --rm --sig-proxy=true -w /app -v $(pwd):/app -p $PORT:8000 $PYTHON_DEV_IMAGE"
-node: /bin/bash -c "docker run --rm --sig-proxy=true -w /app -v $(pwd):/app $NODE_DEV_IMAGE"
+web: /bin/bash -c "docker run --rm --env-file etc/environments/development/env -w /app -v $(pwd):/app -p $PORT:8000 $PYTHON_DEV_IMAGE"
+node: /bin/bash -c "docker run --rm --env-file etc/environments/development/env --sig-proxy=true -w /app -v $(pwd):/app $NODE_DEV_IMAGE"

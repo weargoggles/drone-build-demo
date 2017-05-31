@@ -6,12 +6,14 @@ pipeline:
       - PATH=usr/local/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
     commands:
       - pip install --root . -r requirements.txt
+      - py.test tests.py
 
   frontend:
     image: node
     commands:
       - ls usr/local/lib/python3.6/site-packages
       - npm install --quiet
+      - npm run test
 
   push:
     image: plugins/docker

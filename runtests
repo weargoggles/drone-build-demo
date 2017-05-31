@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+docker run --rm -it -w /app -v $(pwd):/app $PYTHON_DEV_IMAGE py.test tests.py
+docker run --rm -it -w /app -v $(pwd):/app $NODE_DEV_IMAGE npm run test

@@ -3,3 +3,4 @@ flask
 flask-graphql
 flake8
 meinheld
+pytest

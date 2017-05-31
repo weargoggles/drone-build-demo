@@ -25,5 +25,5 @@ pipeline:
 
   deploy:
     image: weargoggles/drone-nomad
-    foo: bar
-    wootles: footles
+    nomad_address: http://nomad-internal.gibbon.space
+    configuration: nomad.hcl

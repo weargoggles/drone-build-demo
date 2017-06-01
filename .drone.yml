@@ -18,10 +18,10 @@ pipeline:
   push:
     image: plugins/docker
     repo: weargoggles/drone-build-demo
-    tags: latest
+    tags: ${DRONE_TAG}
     secrets: [ docker_username, docker_password ]
     when:
-      branch: master
+      event: tag
 
   deploy:
     image: weargoggles/drone-nomad

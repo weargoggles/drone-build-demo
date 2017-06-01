@@ -25,5 +25,6 @@ pipeline:
 
   deploy:
     image: weargoggles/drone-nomad
+    pull: true
     nomad_address: http://nomad-internal.gibbon.space
     configuration: nomad.hcl

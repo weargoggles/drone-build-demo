@@ -29,7 +29,7 @@ job "drone-build-demo" {
         name = "drone-build-demo"
 
         tags = [
-          "urlprefix-drone-build-demo.gibbon.space/",
+          "urlprefix-drone-build-demo.tuna.dabdev.net/",
         ]
 
         port = "http"

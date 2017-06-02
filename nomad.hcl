@@ -9,7 +9,7 @@ job "drone-build-demo" {
       driver = "docker"
 
       config {
-        image = "weargoggles/drone-build-demo:IMAGE_TAG"
+        image = "weargoggles/drone-build-demo:$IMAGE_TAG"
 
         port_map {
           http = 8000

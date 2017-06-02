@@ -1,5 +1,5 @@
 job "drone-build-demo" {
-  datacenters = ["dc1"]
+  datacenters = ["eu-west-1"]
   type        = "service"
 
   group "web" {
@@ -9,7 +9,7 @@ job "drone-build-demo" {
       driver = "docker"
 
       config {
-        image = "weargoggles/drone-build-demo"
+        image = "weargoggles/drone-build-demo:IMAGE_TAG"
 
         port_map {
           http = 8000

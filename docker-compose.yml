@@ -1,0 +1,24 @@
+# dev setup
+
+version: '2'
+
+services:
+  python:
+    build:
+      context: .
+      dockerfile: dev/python.dockerfile
+    working_dir: /app
+    ports:
+      - "8000"
+    env_file: .env
+    tty: true
+    volumes:
+      - .:/app
+
+  node:
+    build:
+      context: .
+      dockerfile: dev/node.dockerfile
+    working_dir: /app
+    volumes:
+      - .:/app

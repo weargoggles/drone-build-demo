@@ -24,7 +24,12 @@ pipeline:
       event: tag
 
   deploy:
+    # a staging deployment
     image: weargoggles/drone-nomad
+    # always update the image for this step
     pull: true
-    nomad_address: http://nomad-internal.gibbon.space
+    nomad_address: http://nomad-internal.tuna.dabdev.net
     configuration: nomad.hcl
+    image_tag: ${DRONE_TAG}
+    when:
+      event: tag

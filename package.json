@@ -26,10 +26,10 @@
     "babelify": "^7.3.0",
     "browserify": "^14.4.0",
     "react": "^15.5.4",
+    "react-dom": "^15.5.4",
     "uglify-js": "^3.0.14"
   },
   "devDependencies": {
-    "budo": "^10.0.3",
-    "react-dom": "^15.5.4"
+    "budo": "^10.0.3"
   }
 }

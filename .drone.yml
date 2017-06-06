@@ -10,6 +10,8 @@ pipeline:
 
   frontend:
     image: node:6
+    environment:
+      - NODE_ENV=production
     commands:
       - npm install --quiet
       - npm run build

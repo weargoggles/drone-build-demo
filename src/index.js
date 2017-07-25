@@ -6,6 +6,6 @@ let container = document.createElement('div');
 document.getElementsByTagName('body')[0].appendChild(container);
 
 ReactDOM.render(
-  <h1>Hi, DabApps!</h1>,
+  <h1>Hello, DabApps!</h1>,
   container
 );
